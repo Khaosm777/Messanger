@@ -18,5 +18,20 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        newView.buttonLogin.addTarget(self, action: #selector(buttonLoginTapped), for: .touchDown)
+        newView.labelRegist2.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tappedLabelRegist)))
+    }
+    
+    @objc
+    private func buttonLoginTapped() {
+        dismiss(animated: true)
+    }
+    
+    @objc
+    private func tappedLabelRegist() {
+        let vc = RegisterViewController()
+        vc.modalPresentationStyle = .fullScreen
+        
+        present(vc, animated: true)
     }
 }

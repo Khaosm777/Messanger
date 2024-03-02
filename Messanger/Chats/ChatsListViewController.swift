@@ -15,18 +15,15 @@ final class ChatsListViewController: UIViewController {
         view.backgroundColor = .white
         
         title = "Chats"
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         
         showLoginScreen()
     }
+    
     //MARK: - Private methods
     
     private func showLoginScreen() {
         let vc = LoginViewController()
-//        vc.modalPresentationStyle = .fullScreen
+        vc.modalPresentationStyle = .fullScreen
         
         present(vc, animated: true)
     }
