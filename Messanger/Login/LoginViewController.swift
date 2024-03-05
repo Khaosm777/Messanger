@@ -20,6 +20,13 @@ class LoginViewController: UIViewController {
         
         newView.buttonLogin.addTarget(self, action: #selector(buttonLoginTapped), for: .touchDown)
         newView.labelRegist2.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tappedLabelRegist)))
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(registFinish), name: Notifications.registrationDidFinish, object: nil)
+    }
+    
+    @objc
+    private func registFinish() {
+        dismiss(animated: true)
     }
     
     @objc

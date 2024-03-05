@@ -20,6 +20,17 @@ final class RegisterView: UIView {
         return label
     }()
     
+    var avatarImage: UIImageView = {
+        let imageV = UIImageView()
+        imageV.translatesAutoresizingMaskIntoConstraints = false
+        imageV.image = UIImage(systemName: "person.circle")?.withTintColor(.black, renderingMode: .alwaysOriginal)
+        imageV.isUserInteractionEnabled = true
+        imageV.layer.borderWidth = 1
+        imageV.layer.cornerRadius = 50
+        imageV.clipsToBounds = true
+        return imageV
+    }()
+    
     private let stackView: UIStackView = {
         let sv = UIStackView()
         sv.translatesAutoresizingMaskIntoConstraints = false
@@ -28,7 +39,7 @@ final class RegisterView: UIView {
         return sv
     }()
     
-    private let textFieldN: UITextField = {
+    let textFieldN: UITextField = {
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.placeholder = "Имя"
@@ -40,7 +51,7 @@ final class RegisterView: UIView {
         return tf
     }()
     
-    private let textFieldE: UITextField = {
+    let textFieldE: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Email"
         tf.layer.borderWidth = 1
@@ -52,19 +63,21 @@ final class RegisterView: UIView {
         return tf
     }()
     
-    private let textFieldP: UITextField = {
+    let textFieldP: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Пароль"
         tf.layer.borderWidth = 1
         tf.layer.cornerRadius = 8
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.leftViewMode = .always
+        tf.isSecureTextEntry = true
         tf.backgroundColor = Colors.lightGray
+        
         tf.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
         return tf
     }()
     
-    private let textFieldCP: UITextField = {
+    let textFieldCP: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Повторите пароль"
         tf.layer.borderWidth = 1
@@ -72,6 +85,7 @@ final class RegisterView: UIView {
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.leftViewMode = .always
         tf.backgroundColor = Colors.lightGray
+        tf.isSecureTextEntry = true
         tf.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
         return tf
     }()
@@ -123,6 +137,7 @@ final class RegisterView: UIView {
     
     private func setupLayour() {
         setupLabel()
+        setupAvatar()
         setupStackView()
         setupButtonLogin()
         setupLabelRegist()
@@ -132,16 +147,25 @@ final class RegisterView: UIView {
     private func setupLabel() {
         addSubview(labelWelcome)
         
-        labelWelcome.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 86).isActive = true
+        labelWelcome.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 44).isActive = true
         labelWelcome.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24).isActive = true
         labelWelcome.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24).isActive = true
         
     }
     
+    private func setupAvatar() {
+        addSubview(avatarImage)
+        
+        avatarImage.topAnchor.constraint(equalTo: labelWelcome.bottomAnchor, constant: 24).isActive = true
+        avatarImage.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        avatarImage.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        avatarImage.widthAnchor.constraint(equalToConstant: 100).isActive = true
+    }
+    
     private func setupStackView() {
         addSubview(stackView)
         
-        stackView.topAnchor.constraint(equalTo: labelWelcome.bottomAnchor, constant: 32).isActive = true
+        stackView.topAnchor.constraint(equalTo: avatarImage.bottomAnchor, constant: 24).isActive = true
         stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 22).isActive = true
         stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -22).isActive = true
         stackView.widthAnchor.constraint(equalToConstant: 400).isActive = true
