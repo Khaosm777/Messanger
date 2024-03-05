@@ -89,7 +89,7 @@ extension RegisterViewController {
         }
         
         dismiss(animated: true)
-        NotificationCenter.default.post(name: Notifications.registrationDidFinish, object: nil)
+        NotificationCenter.default.post(name: Notifications.registerDidFinish, object: nil)
     }
 }
 

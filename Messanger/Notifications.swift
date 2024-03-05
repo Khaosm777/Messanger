@@ -2,11 +2,11 @@
 //  Notifications.swift
 //  Messanger
 //
-//  Created by Admin on 02.03.2024.
+//  Created by Admin on 06.03.2024.
 //
 
 import Foundation
 
 struct Notifications {
-    static let registrationDidFinish = Notification.Name("registrationDidFinish")
+    static let registerDidFinish = Notification.Name("Notifications.registrationDidFinish")
 }

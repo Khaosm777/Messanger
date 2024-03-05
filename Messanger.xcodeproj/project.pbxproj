@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8405C2472B97E43C00BEB84D /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405C2462B97E43C00BEB84D /* Notifications.swift */; };
 		8476226A2B7A14A70025526A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847622692B7A14A70025526A /* Colors.swift */; };
 		8476226D2B7A17DB0025526A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8476226C2B7A17DB0025526A /* RegisterViewController.swift */; };
 		8476226F2B7A17F80025526A /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8476226E2B7A17F80025526A /* RegisterView.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8405C2462B97E43C00BEB84D /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		847622692B7A14A70025526A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8476226C2B7A17DB0025526A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8476226E2B7A17F80025526A /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				84EFDC462B6C11240086D86D /* LaunchScreen.storyboard */,
 				84EFDC492B6C11240086D86D /* Info.plist */,
 				84EFDC3B2B6C11230086D86D /* AppDelegate.swift */,
+				8405C2462B97E43C00BEB84D /* Notifications.swift */,
 			);
 			path = Messanger;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			files = (
 				8476226D2B7A17DB0025526A /* RegisterViewController.swift in Sources */,
 				8476226F2B7A17F80025526A /* RegisterView.swift in Sources */,
+				8405C2472B97E43C00BEB84D /* Notifications.swift in Sources */,
 				84EFDC592B6C16830086D86D /* LoginViewController.swift in Sources */,
 				8476226A2B7A14A70025526A /* Colors.swift in Sources */,
 				84EFDC5B2B6C1AB70086D86D /* LoginView.swift in Sources */,
