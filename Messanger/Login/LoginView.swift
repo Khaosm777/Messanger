@@ -20,31 +20,35 @@ class LoginView: UIView {
         return label
     }()
     
-    private let textFieldL: UITextField = {
+    let textFieldL: UITextField = {
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.placeholder = "Введите ваш e-mail"
         tf.layer.borderWidth = 1
         tf.layer.cornerRadius = 8
         tf.leftViewMode = .always
+        tf.autocapitalizationType = .none
         tf.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
         tf.backgroundColor = Colors.lightGray
         return tf
     }()
     
-    private let textFieldP: UITextField = {
+    let textFieldP: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Введите ваш пароль"
         tf.layer.borderWidth = 1
         tf.layer.cornerRadius = 8
         tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.autocapitalizationType = .none
         tf.leftViewMode = .always
+        tf.isSecureTextEntry = true
+        
         tf.backgroundColor = Colors.lightGray
         tf.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
         return tf
     }()
     
-     let buttonLogin: UIButton = {
+    let buttonLogin: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Логин", for: .normal)
@@ -61,7 +65,7 @@ class LoginView: UIView {
         return label
     }()
     
-     let labelRegist2: UILabel = {
+    let labelRegist2: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Зарегистрироваться сейчас"
@@ -83,7 +87,7 @@ class LoginView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-        //MARK: - Private methods
+    //MARK: - Private methods
     
     private func setup() {
         setupLabel()
@@ -119,7 +123,7 @@ class LoginView: UIView {
         textFieldP.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 22).isActive = true
         textFieldP.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -22).isActive = true
         textFieldP.heightAnchor.constraint(equalToConstant: 56).isActive = true
-
+        
     }
     
     private func setupButtonLogin() {

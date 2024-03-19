@@ -10,6 +10,7 @@ import UIKit
 final class RegisterViewController: UIViewController {
     
     let mainView = RegisterView()
+    let registNetworkService = RegisterNetworkService()
     
     override func loadView() {
         view = mainView
@@ -41,6 +42,18 @@ final class RegisterViewController: UIViewController {
         setupUsername(username: username)
         setupEmail(email: email)
         setupPasswort(passwort: passwort, confirm: confirm)
+        
+        registNetworkService.register(email: email, password: passwort) { [weak self] result in
+            guard let self = self else { return }
+            
+            switch result {
+            case .success(let email):
+                self.dismiss(animated: true)
+                NotificationCenter.default.post(name: Notifications.loginDidFinish, object: nil)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
     @objc
@@ -87,9 +100,6 @@ extension RegisterViewController {
             alert(title: "Ошибка в пароле", message: "Пароли не совпадают")
             return
         }
-        
-        dismiss(animated: true)
-        NotificationCenter.default.post(name: Notifications.registerDidFinish, object: nil)
     }
 }
 
