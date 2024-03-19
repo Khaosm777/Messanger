@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 final class MainTabBarController: UITabBarController {
     
@@ -39,5 +40,28 @@ final class MainTabBarController: UITabBarController {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if FirebaseAuth.Auth.auth().currentUser == nil {
+            print(FirebaseAuth.Auth.auth().currentUser?.email)
+            showLoginScreen()
+        }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(loginDidFinish), name: Notifications.loginDidFinish, object: nil)
+    }
+    
+    private func showLoginScreen() {
+        let vc = LoginViewController()
+        vc.modalPresentationStyle = .fullScreen
+        
+        present(vc, animated: true)
+    }
+    
+    @objc
+    private func loginDidFinish() {
+        selectedIndex = 0
     }
 }

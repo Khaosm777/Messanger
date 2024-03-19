@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D3FE0CC5AC14EDD317F60F9 /* Pods_Messanger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A777416949F2380D72A0826 /* Pods_Messanger.framework */; };
 		8405C2472B97E43C00BEB84D /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405C2462B97E43C00BEB84D /* Notifications.swift */; };
+		8405C24D2B97EA5200BEB84D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8405C24C2B97EA5200BEB84D /* GoogleService-Info.plist */; };
+		8405C24F2BA508E600BEB84D /* LoginNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405C24E2BA508E600BEB84D /* LoginNetworkService.swift */; };
+		8405C2512BA508F700BEB84D /* RegisterNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405C2502BA508F700BEB84D /* RegisterNetworkService.swift */; };
+		8405C2532BA6799900BEB84D /* ChatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405C2522BA6799900BEB84D /* ChatsTableViewCell.swift */; };
+		8405C2562BA67A9D00BEB84D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405C2552BA67A9D00BEB84D /* ChatViewController.swift */; };
+		8405C2582BA67CE200BEB84D /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405C2572BA67CE200BEB84D /* Chat.swift */; };
 		8476226A2B7A14A70025526A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847622692B7A14A70025526A /* Colors.swift */; };
 		8476226D2B7A17DB0025526A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8476226C2B7A17DB0025526A /* RegisterViewController.swift */; };
 		8476226F2B7A17F80025526A /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8476226E2B7A17F80025526A /* RegisterView.swift */; };
@@ -24,6 +31,12 @@
 
 /* Begin PBXFileReference section */
 		8405C2462B97E43C00BEB84D /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		8405C24C2B97EA5200BEB84D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8405C24E2BA508E600BEB84D /* LoginNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNetworkService.swift; sourceTree = "<group>"; };
+		8405C2502BA508F700BEB84D /* RegisterNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNetworkService.swift; sourceTree = "<group>"; };
+		8405C2522BA6799900BEB84D /* ChatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsTableViewCell.swift; sourceTree = "<group>"; };
+		8405C2552BA67A9D00BEB84D /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		8405C2572BA67CE200BEB84D /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		847622692B7A14A70025526A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8476226C2B7A17DB0025526A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8476226E2B7A17F80025526A /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -38,6 +51,9 @@
 		84EFDC552B6C148E0086D86D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		84EFDC582B6C16830086D86D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		84EFDC5A2B6C1AB70086D86D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		8A777416949F2380D72A0826 /* Pods_Messanger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messanger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D53199D125D9D05E56D4B9B1 /* Pods-Messanger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messanger.debug.xcconfig"; path = "Target Support Files/Pods-Messanger/Pods-Messanger.debug.xcconfig"; sourceTree = "<group>"; };
+		EF02822C140546DE4C53C684 /* Pods-Messanger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messanger.release.xcconfig"; path = "Target Support Files/Pods-Messanger/Pods-Messanger.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +61,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D3FE0CC5AC14EDD317F60F9 /* Pods_Messanger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8405C2542BA67A8400BEB84D /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				8405C2552BA67A9D00BEB84D /* ChatViewController.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 		8476226B2B7A17C40025526A /* Register */ = {
 			isa = PBXGroup;
 			children = (
 				8476226C2B7A17DB0025526A /* RegisterViewController.swift */,
 				8476226E2B7A17F80025526A /* RegisterView.swift */,
+				8405C2502BA508F700BEB84D /* RegisterNetworkService.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -65,6 +91,8 @@
 			children = (
 				84EFDC3A2B6C11230086D86D /* Messanger */,
 				84EFDC392B6C11230086D86D /* Products */,
+				CE2D0E29945569DB232D34A2 /* Pods */,
+				CFD1CB0D82FEEFA779B423D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +119,7 @@
 				84EFDC492B6C11240086D86D /* Info.plist */,
 				84EFDC3B2B6C11230086D86D /* AppDelegate.swift */,
 				8405C2462B97E43C00BEB84D /* Notifications.swift */,
+				8405C24C2B97EA5200BEB84D /* GoogleService-Info.plist */,
 			);
 			path = Messanger;
 			sourceTree = "<group>";
@@ -99,6 +128,9 @@
 			isa = PBXGroup;
 			children = (
 				84EFDC4F2B6C13260086D86D /* ChatsListViewController.swift */,
+				8405C2522BA6799900BEB84D /* ChatsTableViewCell.swift */,
+				8405C2572BA67CE200BEB84D /* Chat.swift */,
+				8405C2542BA67A8400BEB84D /* Chat */,
 			);
 			path = Chats;
 			sourceTree = "<group>";
@@ -116,8 +148,26 @@
 			children = (
 				84EFDC582B6C16830086D86D /* LoginViewController.swift */,
 				84EFDC5A2B6C1AB70086D86D /* LoginView.swift */,
+				8405C24E2BA508E600BEB84D /* LoginNetworkService.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		CE2D0E29945569DB232D34A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D53199D125D9D05E56D4B9B1 /* Pods-Messanger.debug.xcconfig */,
+				EF02822C140546DE4C53C684 /* Pods-Messanger.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CFD1CB0D82FEEFA779B423D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A777416949F2380D72A0826 /* Pods_Messanger.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,9 +177,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84EFDC4C2B6C11240086D86D /* Build configuration list for PBXNativeTarget "Messanger" */;
 			buildPhases = (
+				A77747B65B1DB1BEFA1937F3 /* [CP] Check Pods Manifest.lock */,
 				84EFDC342B6C11230086D86D /* Sources */,
 				84EFDC352B6C11230086D86D /* Frameworks */,
 				84EFDC362B6C11230086D86D /* Resources */,
+				65EE75784BBA07B9B832631B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,10 +232,53 @@
 			files = (
 				84EFDC482B6C11240086D86D /* LaunchScreen.storyboard in Resources */,
 				84EFDC452B6C11240086D86D /* Assets.xcassets in Resources */,
+				8405C24D2B97EA5200BEB84D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		65EE75784BBA07B9B832631B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Messanger/Pods-Messanger-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Messanger/Pods-Messanger-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Messanger/Pods-Messanger-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A77747B65B1DB1BEFA1937F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Messanger-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84EFDC342B6C11230086D86D /* Sources */ = {
@@ -192,15 +287,20 @@
 			files = (
 				8476226D2B7A17DB0025526A /* RegisterViewController.swift in Sources */,
 				8476226F2B7A17F80025526A /* RegisterView.swift in Sources */,
+				8405C2512BA508F700BEB84D /* RegisterNetworkService.swift in Sources */,
 				8405C2472B97E43C00BEB84D /* Notifications.swift in Sources */,
 				84EFDC592B6C16830086D86D /* LoginViewController.swift in Sources */,
+				8405C2582BA67CE200BEB84D /* Chat.swift in Sources */,
 				8476226A2B7A14A70025526A /* Colors.swift in Sources */,
 				84EFDC5B2B6C1AB70086D86D /* LoginView.swift in Sources */,
 				84EFDC502B6C13260086D86D /* ChatsListViewController.swift in Sources */,
 				84EFDC3C2B6C11230086D86D /* AppDelegate.swift in Sources */,
+				8405C24F2BA508E600BEB84D /* LoginNetworkService.swift in Sources */,
 				84EFDC562B6C148E0086D86D /* MainTabBarController.swift in Sources */,
 				84EFDC542B6C14510086D86D /* ProfileViewController.swift in Sources */,
 				84EFDC3E2B6C11230086D86D /* SceneDelegate.swift in Sources */,
+				8405C2562BA67A9D00BEB84D /* ChatViewController.swift in Sources */,
+				8405C2532BA6799900BEB84D /* ChatsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +434,7 @@
 		};
 		84EFDC4D2B6C11240086D86D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D53199D125D9D05E56D4B9B1 /* Pods-Messanger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -365,6 +466,7 @@
 		};
 		84EFDC4E2B6C11240086D86D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF02822C140546DE4C53C684 /* Pods-Messanger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
